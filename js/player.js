@@ -371,7 +371,10 @@ function DGPlayer(root) {
                 active.classList.remove("active");
 
             if(songs.length)
-                $playlist.querySelector("li[data-no='"+track+"']").classList.add('active');
+                var play = $playlist.querySelector("li[data-no='"+track+"']");
+                if (play) {
+                    play.classList.add('active');
+                }
         }
 
     var playlist = function() {
